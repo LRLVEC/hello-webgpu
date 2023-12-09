@@ -7,3 +7,4 @@
 3. - [ ] shader loader
 4. - [ ] data streaming
 5. - [x] wasm multi thread: not an option
+6. - [x] cmake presets

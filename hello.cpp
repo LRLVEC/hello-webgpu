@@ -1,7 +1,6 @@
 #include <GLFW/glfw3.h>
 #include <webgpu/webgpu_cpp.h>
 #include <cstdio>
-// #define __EMSCRIPTEN__
 #if defined(__EMSCRIPTEN__)
 #include <emscripten/emscripten.h>
 #else

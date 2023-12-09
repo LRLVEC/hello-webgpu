@@ -8,19 +8,12 @@
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/master/ninja/gaussian-renderer/gaussian-renderer.exe",
+            "program": "${workspaceFolder}/build_local/Debug/hello.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build/master/ninja/gaussian-renderer/",
+            "cwd": "${workspaceFolder}/build_local/Debug/",
             "environment": [],
             "console": "externalTerminal"
         },
-        {
-            "name": "CUDA C++: Launch",
-            "type": "cuda-gdb",
-            "request": "launch",
-			"cwd": "${workspaceFolder}/build/master/ninja/gaussian-renderer/",
-            "program": "${workspaceFolder}/build/master/ninja/gaussian-renderer/gaussian-renderer.exe"
-        }
     ]
 }

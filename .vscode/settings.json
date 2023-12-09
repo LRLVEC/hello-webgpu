@@ -1,8 +1,8 @@
 {
-    "cmake.generator": "Ninja",
-	"cmake.buildDirectory":"${workspaceFolder}/build/master/ninja",
-	"cmake.configureArgs": [],
-	
+	// "cmake.generator": "Ninja",
+	// "cmake.buildDirectory": "${workspaceFolder}/build/master/ninja",
+	// "cmake.configureArgs": [],
+
 	"grammarly.files.include": [
 		"**/*.md"
 	]

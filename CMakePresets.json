@@ -1,0 +1,64 @@
+{
+	"version": 2,
+	"configurePresets": [
+		{
+			"name": "emscripten",
+			"displayName": "Build web",
+			"description": "Sets Ninja generator, build and install directory",
+			"generator": "Ninja Multi-Config",
+			"binaryDir": "${sourceDir}/build_web/",
+			"cacheVariables": {
+				"CMAKE_TOOLCHAIN_FILE": "E:\\files\\C++\\emsdk\\upstream\\emscripten\\cmake\\Modules\\Platform\\Emscripten.cmake"
+			}
+		},
+		{
+			"name": "msvc",
+			"displayName": "Build local",
+			"description": "Using compilers for Visual Studio 17 2022 (x64 architecture)",
+			"generator": "Ninja Multi-Config",
+			"binaryDir": "${sourceDir}/build_local/",
+			"toolset": {
+				"value": "host=x64",
+				"strategy": "external"
+			},
+			"architecture": {
+				"value": "x64",
+				"strategy": "external"
+			},
+			"cacheVariables": {
+				"CMAKE_C_COMPILER": "cl.exe",
+				"CMAKE_CXX_COMPILER": "cl.exe",
+				"CMAKE_TOOLCHAIN_FILE": "E:\\files\\C++\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake",
+				"VCPKG_TARGET_TRIPLET": "x64-windows"
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "msvc-release",
+			"displayName": "Visual Studio Enterprise 2022 amd64 - Release",
+			"configurePreset": "msvc",
+			"configuration": "Release"
+		},
+		{
+			"name": "msvc-debug",
+			"displayName": "Visual Studio Enterprise 2022 amd64 - Debug",
+			"configurePreset": "msvc",
+			"configuration": "Debug"
+		},
+		{
+			"name": "web-release",
+			"description": "",
+			"displayName": "emscripten Release",
+			"configuration": "Release",
+			"configurePreset": "emscripten"
+		},
+		{
+			"name": "web-debug",
+			"description": "",
+			"displayName": "emscripten Debug",
+			"configuration": "Debug",
+			"configurePreset": "emscripten"
+		}
+	]
+}
